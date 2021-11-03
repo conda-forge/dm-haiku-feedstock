@@ -24,6 +24,7 @@ requirements:
     - python >=3.6
     - tabulate
     - jax
+    - jmp
 
 test:
   imports:
