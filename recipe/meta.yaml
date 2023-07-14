@@ -1,5 +1,5 @@
 {% set name = "dm-haiku" %}
-{% set version = "0.0.8" %}
+{% set version = "0.0.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/deepmind/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: bbcade7421b51751dd128d1d7111b6fb1ef777ccdffb77cc36998e7f688b9ea9
+  sha256: 7dea7f92abd48722c5da58956fdc3ee6aeadaf2b09c9a5f35b72460ef72afe39
 
 build:
   number: 0
