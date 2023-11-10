@@ -25,6 +25,7 @@ requirements:
     - tabulate
     - jax
     - jmp
+    - flax
 
 test:
   imports:
