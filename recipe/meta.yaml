@@ -6,26 +6,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/deepmind/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: dad60e2511d973cab651e8b7cb788b721b9738cda9b163d0128308b1e3cfaccf
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dm-haiku-{{ version }}.tar.gz
+  sha256: c420a90c6a76c1d941996698840089df0d352806312eaf7b737486f6c6a32ef2
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python >=3.6
   run:
-    - absl-py >=0.7.1
-    - numpy >=1.18.0
     - python >=3.6
-    - tabulate
-    - jax
-    - jmp
-    - flax
+    - absl-py >=0.7.1
+    - jmp >=0.0.2
+    - numpy >=1.18.0
+    - tabulate >=0.8.9
+    - flax >=0.7.1
 
 test:
   imports:
