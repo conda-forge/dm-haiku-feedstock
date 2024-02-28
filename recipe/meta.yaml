@@ -1,5 +1,5 @@
 {% set name = "dm-haiku" %}
-{% set version = "0.0.11" %}
+{% set version = "0.0.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dm-haiku-{{ version }}.tar.gz
-  sha256: c420a90c6a76c1d941996698840089df0d352806312eaf7b737486f6c6a32ef2
+  sha256: ba0b3acf71433156737fe342c486da11727e5e6c9e054245f4f9b8f0b53eb608
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
