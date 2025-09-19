@@ -1,5 +1,5 @@
 {% set name = "dm-haiku" %}
-{% set version = "0.0.14" %}
+{% set version = "0.0.15" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 0c1d56ef20e1e04d8551f788ff8964167092c5d8051b7c17ed3f9ce60c0b0a59
+  sha256: de08b3673d8ef1148daa5793653fbeb4e8d87de78164c4f6ecaca7c36eadfbb2
 
 build:
   noarch: python
